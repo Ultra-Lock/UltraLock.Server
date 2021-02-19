@@ -1,6 +1,6 @@
 ﻿
 
-namespace UltraLock.Server.Model
+namespace UltraLock.Server.Model.LockDto
 {
     public class LockInAddDto : LockInput
     {

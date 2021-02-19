@@ -1,6 +1,7 @@
 ﻿using Masuit.Tools.Html;
 
-namespace UltraLock.Server.Model
+
+namespace UltraLock.Server.Model.LockDto
 {
     public abstract class LockInput : LockBase
     {

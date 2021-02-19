@@ -1,13 +1,15 @@
-﻿
+﻿using System.ComponentModel.DataAnnotations;
+
 using UltraLock.Server.Helper;
 
-namespace UltraLock.Server.Model
+namespace UltraLock.Server.Model.LockDto
 {
     public abstract class LockBase
     {
         /// <summary>
         /// 名称
         /// </summary>
+        [Required]
         public abstract string Name { get; set; }
         /// <summary>
         /// 描述

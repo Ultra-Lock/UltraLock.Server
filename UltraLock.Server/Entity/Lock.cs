@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using UltraLock.Server.Helper;
 
 namespace UltraLock.Server.Entity
 {
     public class Lock
     {
-        private Guid LockGuid { get; set; }
-
+        public User User { get; set; }
+        public Guid LockGuid { get; set; } = Guid.NewGuid();
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 }

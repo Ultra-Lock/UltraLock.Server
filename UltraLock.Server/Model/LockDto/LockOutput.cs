@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace UltraLock.Server.Model
+
+namespace UltraLock.Server.Model.LockDto
 {
     public abstract class LockOutput : LockBase
     {
