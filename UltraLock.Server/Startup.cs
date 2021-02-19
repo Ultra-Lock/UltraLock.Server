@@ -16,6 +16,7 @@ namespace UltraLock.Server
 {
     public class Startup
     {
+        public const string ApiVersion = "v1";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -30,7 +31,7 @@ namespace UltraLock.Server
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "UltraLock.Server", Version = "v1" });
+                c.SwaggerDoc(ApiVersion, new OpenApiInfo { Title = "UltraLock.Server", Version = ApiVersion });
             });
         }
 
@@ -41,7 +42,7 @@ namespace UltraLock.Server
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "UltraLock.Server v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint($"/swagger/{ApiVersion}/swagger.json", "UltraLock.Server " + ApiVersion));
             }
 
             app.UseHttpsRedirection();
